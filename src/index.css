@@ -5,50 +5,56 @@
 @layer base {
   body {
     font-family: 'Plus Jakarta Sans', sans-serif;
+    background: linear-gradient(135deg, #FF6A00 0%, #FF7E1D 40%, #FFA133 100%);
+    color: #1E1E24;
+    min-height: 100vh;
   }
   code, pre, .font-mono {
     font-family: 'JetBrains Mono', monospace;
   }
 }
 
-.glass-card {
-  background: rgba(18, 22, 31, 0.75);
-  backdrop-filter: blur(16px);
-  -webkit-backdrop-filter: blur(16px);
-  border: 1px solid rgba(255, 255, 255, 0.08);
+/* Geometric Dot Pattern (Matching user banner style) */
+.pattern-dots {
+  background-image: radial-gradient(rgba(255, 255, 255, 0.35) 1.5px, transparent 1.5px);
+  background-size: 16px 16px;
 }
 
-.glass-card-hover {
-  transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
-}
-.glass-card-hover:hover {
-  border-color: rgba(252, 82, 0, 0.4);
-  transform: translateY(-4px);
-  box-shadow: 0 20px 40px -15px rgba(252, 82, 0, 0.15);
+.pattern-dots-orange {
+  background-image: radial-gradient(rgba(255, 106, 0, 0.3) 1.5px, transparent 1.5px);
+  background-size: 14px 14px;
 }
 
-.gradient-text {
-  background: linear-gradient(135deg, #FFFFFF 20%, #FC5200 80%, #FF8C00 100%);
+/* Hexagon Geometric Shape CSS */
+.hexagon {
+  clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%);
+}
+
+.hexagon-badge {
+  clip-path: polygon(50% 0%, 93% 25%, 93% 75%, 50% 100%, 7% 75%, 7% 25%);
+}
+
+/* Crisp White Card with Warm Shadow */
+.clean-white-card {
+  background: #FFFFFF;
+  border-radius: 28px;
+  box-shadow: 0 20px 45px -10px rgba(180, 50, 0, 0.18), 0 0 0 1px rgba(255, 255, 255, 0.8);
+}
+
+.clean-card-hover {
+  transition: all 0.35s cubic-bezier(0.16, 1, 0.3, 1);
+}
+.clean-card-hover:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 30px 60px -15px rgba(230, 81, 0, 0.28), 0 0 0 2px rgba(255, 106, 0, 0.4);
+}
+
+.gradient-orange-bg {
+  background: linear-gradient(135deg, #FF6A00 0%, #FF7E1D 50%, #FFA133 100%);
+}
+
+.gradient-orange-text {
+  background: linear-gradient(135deg, #FF6A00 0%, #FF8A00 100%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
-}
-
-.gradient-orange {
-  background: linear-gradient(135deg, #FC5200 0%, #FF6E27 50%, #FF9F1C 100%);
-}
-
-.gradient-border {
-  position: relative;
-}
-.gradient-border::before {
-  content: '';
-  position: absolute;
-  inset: -1px;
-  border-radius: inherit;
-  padding: 1px;
-  background: linear-gradient(135deg, rgba(252,82,0,0.5), transparent, rgba(46,204,113,0.3));
-  -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
-  -webkit-mask-composite: xor;
-  mask-composite: exclude;
-  pointer-events: none;
 }

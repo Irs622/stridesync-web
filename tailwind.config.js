@@ -7,23 +7,24 @@ export default {
   theme: {
     extend: {
       colors: {
-        brand: {
-          orange: '#FC5200',
-          accent: '#FF6E27',
-          amber: '#FF9F1C',
-          green: '#2ECC71',
-          dark: '#0A0C10',
-          surface: '#12161F',
-          card: '#181C26',
-          border: 'rgba(255, 255, 255, 0.08)'
+        theme: {
+          orange: '#FF6A00',
+          orangeDark: '#E65100',
+          orangeLight: '#FFA133',
+          orangeGlow: '#FF7E1D',
+          cream: '#FFF9F2',
+          card: '#FFFFFF',
+          dark: '#1E1E24',
+          grayText: '#5A6070'
         }
       },
       fontFamily: {
         sans: ['Plus Jakarta Sans', 'Inter', 'sans-serif'],
       },
       boxShadow: {
-        'glow-orange': '0 0 50px -10px rgba(252, 82, 0, 0.4)',
-        'glow-green': '0 0 40px -10px rgba(46, 204, 113, 0.35)',
+        'warm': '0 20px 40px -15px rgba(230, 81, 0, 0.25)',
+        'float': '0 25px 50px -12px rgba(0, 0, 0, 0.15)',
+        'badge': '0 10px 25px -5px rgba(255, 106, 0, 0.35)',
       }
     },
   },
