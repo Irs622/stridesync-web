@@ -29,7 +29,7 @@ export default function Navbar({ onOpenDownload }) {
               Stride<span className={scrolled ? 'text-[#FF6A00]' : 'text-white font-black'}>Sync</span>
             </span>
             <span className={`hidden sm:inline-block text-[10px] uppercase font-extrabold tracking-widest px-2 py-0.5 rounded-full ml-2 border ${scrolled ? 'bg-orange-50 text-[#FF6A00] border-orange-200' : 'bg-white/20 text-white border-white/30'}`}>
-              iOS 18+
+              Beta 0.5
             </span>
           </div>
         </a>

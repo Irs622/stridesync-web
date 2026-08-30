@@ -35,7 +35,7 @@ export default function DownloadModal({ isOpen, onClose }) {
           </div>
           <div>
             <div className="inline-flex items-center gap-1.5 px-2.5 py-0.5 rounded-full bg-orange-50 border border-orange-200 text-[10px] font-black text-[#FF6A00] uppercase">
-              <span>Versi 3.5 Pro (Release)</span>
+              <span>Versi Beta 0.5 (Public Beta)</span>
               <Sparkles className="w-3 h-3" />
             </div>
             <h3 className="text-xl font-black text-gray-900 mt-1">Pasang StrideSync di iPhone</h3>
