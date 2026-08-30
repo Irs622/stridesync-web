@@ -1,0 +1,54 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  body {
+    font-family: 'Plus Jakarta Sans', sans-serif;
+  }
+  code, pre, .font-mono {
+    font-family: 'JetBrains Mono', monospace;
+  }
+}
+
+.glass-card {
+  background: rgba(18, 22, 31, 0.75);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.glass-card-hover {
+  transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+}
+.glass-card-hover:hover {
+  border-color: rgba(252, 82, 0, 0.4);
+  transform: translateY(-4px);
+  box-shadow: 0 20px 40px -15px rgba(252, 82, 0, 0.15);
+}
+
+.gradient-text {
+  background: linear-gradient(135deg, #FFFFFF 20%, #FC5200 80%, #FF8C00 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.gradient-orange {
+  background: linear-gradient(135deg, #FC5200 0%, #FF6E27 50%, #FF9F1C 100%);
+}
+
+.gradient-border {
+  position: relative;
+}
+.gradient-border::before {
+  content: '';
+  position: absolute;
+  inset: -1px;
+  border-radius: inherit;
+  padding: 1px;
+  background: linear-gradient(135deg, rgba(252,82,0,0.5), transparent, rgba(46,204,113,0.3));
+  -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+  -webkit-mask-composite: xor;
+  mask-composite: exclude;
+  pointer-events: none;
+}
