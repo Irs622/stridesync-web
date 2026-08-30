@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import Navbar from './components/Navbar';
 import Hero from './components/Hero';
 import PhoneSimulator from './components/PhoneSimulator';
@@ -10,14 +10,17 @@ import FeaturesGrid from './components/FeaturesGrid';
 import TechStackShowcase from './components/TechStackShowcase';
 import CTASection from './components/CTASection';
 import Footer from './components/Footer';
+import DownloadModal from './components/DownloadModal';
 
 export default function App() {
+  const [downloadModalOpen, setDownloadModalOpen] = useState(false);
+
   return (
     <div className="min-h-screen">
-      <Navbar />
+      <Navbar onOpenDownload={() => setDownloadModalOpen(true)} />
       
       <main className="space-y-0">
-        <Hero />
+        <Hero onOpenDownload={() => setDownloadModalOpen(true)} />
         
         {/* Interactive Athletic Lab Section */}
         <section id="lab" className="py-24 px-6 bg-[#FFF9F2] relative overflow-hidden">
@@ -51,10 +54,15 @@ export default function App() {
 
         <TechStackShowcase />
         
-        <CTASection />
+        <CTASection onOpenDownload={() => setDownloadModalOpen(true)} />
       </main>
 
       <Footer />
+
+      <DownloadModal
+        isOpen={downloadModalOpen}
+        onClose={() => setDownloadModalOpen(false)}
+      />
     </div>
   );
 }

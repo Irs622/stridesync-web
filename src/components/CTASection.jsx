@@ -1,8 +1,8 @@
 import React from 'react';
-import { Github, Download, Terminal } from 'lucide-react';
+import { Github, Download, Terminal, Smartphone } from 'lucide-react';
 import confetti from 'canvas-confetti';
 
-export default function CTASection() {
+export default function CTASection({ onOpenDownload }) {
   const triggerConfetti = () => {
     confetti({
       particleCount: 90,
@@ -23,7 +23,7 @@ export default function CTASection() {
 
       <div className="max-w-5xl mx-auto clean-white-card p-8 sm:p-16 border border-orange-100 text-center space-y-8 relative z-10 shadow-2xl">
         
-        {/* App Icon Container with Hexagon Badge Shadow */}
+        {/* App Icon Container */}
         <div 
           onClick={triggerConfetti}
           className="w-24 h-24 mx-auto rounded-3xl bg-gradient-to-tr from-[#FF6A00] to-[#FFA133] p-1 shadow-2xl shadow-orange-500/40 cursor-pointer hover:scale-110 active:scale-95 transition"
@@ -34,8 +34,28 @@ export default function CTASection() {
         <div className="space-y-3 max-w-2xl mx-auto text-gray-900">
           <h2 className="text-3xl sm:text-5xl font-black tracking-tight">Siap Memecahkan Rekor Baru?</h2>
           <p className="text-gray-600 text-sm sm:text-base leading-relaxed font-medium">
-            StrideSync sudah siap di-compile langsung ke iPhone Anda via Xcode atau terminal, 100% open-source untuk komunitas atlet lari.
+            Unduh langsung paket instalasi **StrideSync.ipa** atau install via Safari iPhone tanpa ribet!
           </p>
+        </div>
+
+        {/* Action Buttons */}
+        <div className="flex flex-col sm:flex-row items-center justify-center gap-4 pt-2">
+          <button
+            onClick={onOpenDownload}
+            className="w-full sm:w-auto px-8 py-4 rounded-2xl bg-[#FF6A00] hover:bg-[#E65100] text-white font-black text-base shadow-xl shadow-orange-500/30 hover:scale-105 transition flex items-center justify-center gap-2"
+          >
+            <Download className="w-5 h-5" />
+            <span>Unduh & Pasang Sekarang (.IPA / OTA)</span>
+          </button>
+          <a
+            href="https://github.com/Irs622/stridesync-ios"
+            target="_blank"
+            rel="noreferrer"
+            className="w-full sm:w-auto px-8 py-4 rounded-2xl bg-orange-50 hover:bg-orange-100 text-[#FF6A00] font-black text-base transition flex items-center justify-center gap-2 border border-orange-200"
+          >
+            <Github className="w-5 h-5" />
+            <span>GitHub Repo</span>
+          </a>
         </div>
 
         {/* Quick CLI Guide */}
@@ -47,25 +67,6 @@ export default function CTASection() {
           <pre className="text-xs font-mono text-gray-300 overflow-x-auto p-2 bg-black/50 rounded-xl">
 <code>xcodebuild build -project StrideSync.xcodeproj -scheme StrideSync</code>
           </pre>
-        </div>
-
-        {/* Buttons */}
-        <div className="flex flex-col sm:flex-row items-center justify-center gap-4 pt-2">
-          <a
-            href="https://github.com/Irs622/stridesync-ios"
-            target="_blank"
-            rel="noreferrer"
-            className="w-full sm:w-auto px-8 py-4 rounded-2xl bg-[#FF6A00] hover:bg-[#E65100] text-white font-black text-base shadow-xl shadow-orange-500/30 hover:scale-105 transition flex items-center justify-center gap-2"
-          >
-            <Github className="w-5 h-5" />
-            <span>Kunjungi Repositori GitHub</span>
-          </a>
-          <button
-            onClick={triggerConfetti}
-            className="w-full sm:w-auto px-8 py-4 rounded-2xl bg-orange-50 hover:bg-orange-100 text-[#FF6A00] font-black text-base transition flex items-center justify-center gap-2 border border-orange-200"
-          >
-            <span>Rayakan Rekor 🏆</span>
-          </button>
         </div>
 
       </div>
