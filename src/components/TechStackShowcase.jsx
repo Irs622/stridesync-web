@@ -5,8 +5,8 @@ export default function TechStackShowcase() {
   const techs = [
     { title: "Swift 6 Concurrency", desc: "Actor-isolated LocationEngine untuk zero data race", icon: <Cpu className="w-5 h-5 text-white" /> },
     { title: "SwiftUI & SwiftData", desc: "Arsitektur view reaktif & offline-first persistence", icon: <Layers className="w-5 h-5 text-white" /> },
-    { title: "ActivityKit & Dynamic Island", desc: "Live Activity real-time di Lock Screen iOS 18", icon: <Radio className="w-5 h-5 text-white" /> },
-    { title: "Apple HealthKit & BLE", desc: "Sinkronisasi dua arah denyut nadi & sensor eksternal", icon: <HeartPulse className="w-5 h-5 text-white" /> }
+    { title: "Supabase & WebSockets", desc: "Real-time feed Kudos, Komentar & RLS PostgreSQL", icon: <Radio className="w-5 h-5 text-white" /> },
+    { title: "Apple HealthKit & BLE", desc: "Sinkronisasi dua arah denyut nadi & sensor daya Bluetooth", icon: <HeartPulse className="w-5 h-5 text-white" /> }
   ];
 
   return (

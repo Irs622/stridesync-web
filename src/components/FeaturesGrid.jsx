@@ -23,9 +23,9 @@ export default function FeaturesGrid() {
     },
     {
       icon: <Users className="w-6 h-6 text-white" />,
-      title: "Live Group Run Radar",
-      description: "Pindai pelari komunitas di sekitarmu dalam radius 1.5 km secara aman dan temukan teman lari dengan pace yang seimbang.",
-      badge: "Community Radar"
+      title: "Live Group Run & Realtime Feed",
+      description: "Pindai pelari komunitas dalam radius 1.5 km dan nikmati streaming Kudos serta Komentar instan via Supabase Realtime WebSockets.",
+      badge: "Realtime WebSocket"
     },
     {
       icon: <Video className="w-6 h-6 text-white" />,
@@ -53,9 +53,9 @@ export default function FeaturesGrid() {
     },
     {
       icon: <Sparkles className="w-6 h-6 text-white" />,
-      title: "Swift 6 Strict Concurrency",
-      description: "Arsitektur modern dengan Actor isolation (LocationEngine) tanpa glitch UI, baterai awet, dan zero data-race.",
-      badge: "Swift 6 Core"
+      title: "Swift 6 Concurrency & CI/CD",
+      description: "Arsitektur modern dengan Actor isolation (LocationEngine), 81 unit tests passing, dan GitHub Actions CI/CD.",
+      badge: "100% Tested"
     }
   ];
 

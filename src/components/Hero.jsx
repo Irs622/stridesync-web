@@ -24,7 +24,7 @@ export default function Hero() {
           {/* Badge Pill with Hexagon Accent */}
           <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-white text-[#FF6A00] font-extrabold text-xs shadow-lg shadow-black/10">
             <span className="w-2.5 h-2.5 rounded-full bg-[#FF6A00] animate-ping" />
-            <span>BETA 0.5 • SWIFT 6 & IOS 18 NATIVE</span>
+            <span>v0.5.0-BETA • SWIFT 6 & IOS 18 NATIVE</span>
             <Sparkles className="w-3.5 h-3.5 text-[#FF6A00]" />
           </div>
 

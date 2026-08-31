@@ -190,8 +190,14 @@ export default function PhoneSimulator() {
                 {/* TAB 2: COMMUNITY FEED */}
                 {activeTab === 'feed' && (
                   <div className="space-y-3">
-                    <div className="text-xs font-extrabold uppercase text-[#FF6A00] tracking-wider border-b border-white/10 pb-2">
-                      Komunitas Atlet StrideSync
+                    <div className="flex items-center justify-between border-b border-white/10 pb-2">
+                      <div className="text-xs font-extrabold uppercase text-[#FF6A00] tracking-wider">
+                        Komunitas Atlet StrideSync
+                      </div>
+                      <span className="flex items-center gap-1.5 text-[9px] font-extrabold uppercase bg-emerald-500/20 text-emerald-400 px-2 py-0.5 rounded-full border border-emerald-500/30 font-mono">
+                        <span className="w-1.5 h-1.5 rounded-full bg-emerald-400 animate-pulse" />
+                        Live WebSockets
+                      </span>
                     </div>
                     
                     <div className="bg-[#181B24] p-3.5 rounded-2xl border border-white/5 space-y-2.5">
